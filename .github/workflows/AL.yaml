@@ -1,12 +1,12 @@
-name: Download
 on: push  
 
+name: Alagoas
+
 jobs:
-  env:
-    STATE_CODE: AL
   download:
-    name: Download
     runs-on: ubuntu-latest
+    env:
+      STATE_CODE: AL    
     steps:
       - name: Maximize build space
         uses: easimon/maximize-build-space@master
