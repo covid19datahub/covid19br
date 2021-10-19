@@ -1,12 +1,11 @@
 name: Download
 on: push  
-
+env:
+   STATE_NAME: Alagoas
+   STATE_CODE: AL
 jobs:
   download:
-    env:
-       STATE_NAME: Alagoas
-       STATE_CODE: AL
-    name: Download
+    name: ${{ env.STATE_NAME }}
     runs-on: ubuntu-latest
     steps:
       - name: Maximize build space
