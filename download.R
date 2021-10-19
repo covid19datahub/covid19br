@@ -34,5 +34,5 @@ x <-
   # format date in YYYY-MM-DD
   dplyr::mutate(date = format(date, "%Y-%m-%d"))
 
-# write output file in the folder states
-data.table::fwrite(x, file = sprintf("states/%s.csv", state), row.names = FALSE)
+# write output file in the download folder
+data.table::fwrite(x, file = sprintf("download/%s.csv", state), row.names = FALSE)
