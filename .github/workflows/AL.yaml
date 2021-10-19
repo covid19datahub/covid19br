@@ -20,10 +20,8 @@ jobs:
           echo "Free space:"
           df -h
       - uses: r-lib/actions/setup-r@master
-      - name: Query dependencies
+      - uses: r-lib/actions/setup-r-dependencies@v1
+      - name: Build
         run: |
-          install.packages(c('data.table','dplyr'))
-        shell: Rscript {0}
-      - name: Deploy package
-        shell: Rscript state.R
+          Rscript state.R
       
