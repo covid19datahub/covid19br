@@ -27,5 +27,6 @@ jobs:
       - name: Archive some file
         uses: actions/upload-artifact@v2
         with:
-          name: out.csv
-          path: artifact.csv
+          name: artifact.csv
+          path: out.csv
+          if-no-files-found: error
