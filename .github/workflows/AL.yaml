@@ -1,11 +1,10 @@
-env:
-  STATE_NAME: Alagoas
-  STATE_CODE: AL
-
+name: Download
 on: push  
-name: Download ${{ env.STATE_NAME }}
 
 jobs:
+  env:
+    STATE_NAME: Alagoas
+    STATE_CODE: AL
   download:
     name: ${{ env.STATE_NAME }}
     runs-on: ubuntu-latest
