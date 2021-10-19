@@ -1,17 +1,17 @@
 library(magrittr)
 
-# read state code from argument (e.g. ES for Espirito Santo)
+# Read state code from argument (e.g. ES for Espirito Santo)
 state <- commandArgs(trailingOnly = TRUE)
 if(length(state) != 1)
   stop("Usage: Rscript download.R <state-code>")
 
-# web scrape the page to find the latest URL to the data file
+# Web scrape the page to find the latest URL to the data file
 url <- 
   rvest::read_html("https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao/resource/ef3bd0b8-b605-474b-9ae5-c97390c197a8") %>%
   rvest::html_nodes(sprintf('a:contains("Dados %s")', state)) %>% 
   rvest::html_attr('href')
 
-# download
+# Download
 x <- 
   # read data
   data.table::fread(
@@ -34,7 +34,9 @@ x <-
   # filter out dates before Dec 2020
   dplyr::filter(date > "2020-12-01") %>%
   # format date in YYYY-MM-DD
-  dplyr::mutate(date = format(date, "%Y-%m-%d"))
+  dplyr::mutate(date = format(date, "%Y-%m-%d")) %>%
+  # capitalize columns
+  dplyr::rename(Date = date, IBGE6 = ibge, Type = type, N = n)
 
-# write output file in the download folder
+# Write output file in the download folder
 data.table::fwrite(x, file = sprintf("download/%s.csv", state), row.names = FALSE)
