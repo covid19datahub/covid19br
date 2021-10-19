@@ -24,4 +24,8 @@ jobs:
       - name: Build
         run: |
           Rscript state.R
-      
+      - name: Archive some file
+        uses: actions/upload-artifact@v2
+        with:
+          name: out.csv
+          path: artifact.csv
