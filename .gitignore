@@ -37,6 +37,3 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
-
-# Workflow files
-.github/r-depends.rds

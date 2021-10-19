@@ -8,8 +8,6 @@ jobs:
     env:
       STATE_CODE: AC  
     steps:
-      - name: Maximize build space
-        uses: easimon/maximize-build-space@master
       - name: Checkout
         uses: actions/checkout@v2
       - name: Disk Space
@@ -24,6 +22,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          touch download/${{ env.STATE_CODE }}.csv
           git add download/${{ env.STATE_CODE }}.csv
-          git commit -m "Automatic Update"
+          git commit -m "Automated Update"
           git push
