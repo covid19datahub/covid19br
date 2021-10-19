@@ -2,13 +2,13 @@ on:
   schedule: 
     - cron:  '0 0 * * *' 
 
-name: São Paulo
+name: Ceará
 
 jobs:
   download:
     runs-on: ubuntu-latest
     env:
-      STATE_CODE: SP
+      STATE_CODE: CE
     steps:
       - name: Maximize build space
         uses: easimon/maximize-build-space@master

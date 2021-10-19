@@ -1,6 +1,5 @@
 on:
   schedule: 
-    # * is a special character in YAML so you have to quote this string
     - cron:  '0 0 * * *' 
 
 name: Alagoas
@@ -9,10 +8,14 @@ jobs:
   download:
     runs-on: ubuntu-latest
     env:
-      STATE_CODE: AL    
+      STATE_CODE: AL
     steps:
       - name: Maximize build space
         uses: easimon/maximize-build-space@master
+        with:
+          root-reserve-mb: 512
+          swap-size-mb: 1024
+          remove-dotnet: 'true'
       - name: Checkout
         uses: actions/checkout@v2
       - name: Disk Space
@@ -28,5 +31,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add download/${{ env.STATE_CODE }}.csv
-          git commit -m "Automatic Update"
+          git commit --allow-empty -m "Automated Update"
           git push
