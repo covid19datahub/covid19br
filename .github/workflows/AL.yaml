@@ -25,7 +25,7 @@ jobs:
           Rscript state.R
       - name: Deploy Files
         run: |
-          git config user.name ${{ secrets.GH_USER }}
-          git config user.email "${{ secrets.GH_MAIL }}"
+          git config user.name "GitHub Action"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add out.csv
           git push
