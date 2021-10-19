@@ -8,8 +8,6 @@ jobs:
     env:
       STATE_CODE: SP 
     steps:
-      - name: Maximize build space
-        uses: easimon/maximize-build-space@master
       - name: Checkout
         uses: actions/checkout@v2
       - name: Disk Space
