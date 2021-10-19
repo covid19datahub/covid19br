@@ -1,32 +1,31 @@
-name: AL
-on: push
+env:
+  STATE_NAME: Alagoas
+  STATE_CODE: AL
+
+on: push  
+name: Download ${{ env.STATE_NAME }}
 
 jobs:
-  build:
-    name: Build my artifact
+  download:
+    name: ${{ env.STATE_NAME }}
     runs-on: ubuntu-latest
     steps:
       - name: Maximize build space
         uses: easimon/maximize-build-space@master
-        with:
-          root-reserve-mb: 512
-          swap-size-mb: 1024
-          remove-dotnet: 'true'
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Build
+      - name: Disk Space
         run: |
-          echo "Free space:"
           df -h
       - uses: r-lib/actions/setup-r@master
       - uses: r-lib/actions/setup-r-dependencies@v1
-      - name: Build
+      - name: Download
         run: |
-          Rscript state.R AL
+          Rscript download.R ${{ env.STATE_CODE }}
       - name: Deploy Files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add download/AL.csv
+          git add download/${{ env.STATE_CODE }}.csv
           git commit -m "Automatic Update"
           git push
