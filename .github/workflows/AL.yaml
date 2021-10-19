@@ -6,8 +6,24 @@ jobs:
     name: Build my artifact
     runs-on: ubuntu-latest
     steps:
+      - name: Maximize build space
+        uses: easimon/maximize-build-space@master
+        with:
+          root-reserve-mb: 512
+          swap-size-mb: 1024
+          remove-dotnet: 'true'
+      - name: Checkout
+        uses: actions/checkout@v2
 
       - name: Build
         run: |
           echo "Free space:"
           df -h
+      - uses: r-lib/actions/setup-r@master
+      - name: Query dependencies
+        run: |
+          install.packages(c('data.table','dplyr'))
+        shell: Rscript {0}
+      - name: Deploy package
+        shell: Rscript state.R
+      
