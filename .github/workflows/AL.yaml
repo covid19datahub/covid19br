@@ -6,7 +6,7 @@ jobs:
     env:
        STATE_NAME: Alagoas
        STATE_CODE: AL
-    name: ${{ env.STATE_NAME }}
+    name: Download
     runs-on: ubuntu-latest
     steps:
       - name: Maximize build space
