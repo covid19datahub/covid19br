@@ -1,0 +1,32 @@
+on:
+  schedule: 
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 0 * * *' 
+
+name: Acre
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    env:
+      STATE_CODE: AC  
+    steps:
+      - name: Maximize build space
+        uses: easimon/maximize-build-space@master
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Disk Space
+        run: |
+          df -h
+      - uses: r-lib/actions/setup-r@master
+      - uses: r-lib/actions/setup-r-dependencies@v1
+      - name: Download
+        run: |
+          Rscript download.R ${{ env.STATE_CODE }}
+      - name: Deploy Files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add download/${{ env.STATE_CODE }}.csv
+          git commit -m "Automatic Update"
+          git push
