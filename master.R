@@ -14,5 +14,12 @@ master <- dplyr::right_join(population, vaccines, by = "IBGE6")
 # Drop IBGE6 and keep only IBGE(7)
 master <- dplyr::select(master, -IBGE6)
 
+# Extract latest counts for each municipality
+latest <- master %>%
+  dplyr::group_by(IBGE) %>%
+  dplyr::arrange(Date) %>%
+  dplyr::filter(dplyr::row_number()==dplyr::n())
+
 # Write output files in the root folder
 data.table::fwrite(master, file = "master.csv", row.names = FALSE)
+data.table::fwrite(latest, file = "master-latest.csv", row.names = FALSE)
