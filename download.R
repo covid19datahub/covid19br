@@ -53,4 +53,4 @@ x <-
   dplyr::rename(Date = date, IBGE6 = ibge, Type = type, N = n)
 
 # Write output file in the download folder
-data.table::fwrite(x, file = sprintf("download/%s.csv", state), row.names = FALSE)
+data.table::fwrite(x, file = sprintf("download/%s.csv.gz", state), row.names = FALSE)
