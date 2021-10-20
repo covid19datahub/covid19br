@@ -22,7 +22,8 @@ x <-
       "vacina_descricao_dose" = "character"), 
     col.names = c("date", "ibge", "type"), 
     encoding = "UTF-8", 
-    sep = ";", 
+    sep = ";",
+    header = TRUE,
     tmpdir = getwd(),
     data.table = FALSE,
     verbose = TRUE) %>%
