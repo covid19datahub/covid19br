@@ -34,9 +34,13 @@ x <-
     verbose = TRUE) %>%
   # sanitize fields
   dplyr::mutate(
+    # convert to date
     date = as.Date(date),
+    # keep digits only
     ibge = gsub("\\D", "", ibge),
-    type = gsub("\\s|[ªº]", "", type),
+    # strip white spaces and superscripts
+    type = gsub("[\\p{Zs}ªº]", "", type, perl = TRUE),
+    # replace numbers with names 
     type = gsub("1", "First", type),
     type = gsub("2", "Second", type),
     type = gsub("3", "Third", type)) %>%
