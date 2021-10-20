@@ -21,6 +21,7 @@ latest <- master %>%
   dplyr::filter(dplyr::row_number()==dplyr::n()-1)
 
 # Compute vaccination rate to update datawrapper
+# https://datawrapper.dwcdn.net/RBpM2/
 datawrapper <- latest %>%
   dplyr::mutate(PercFullyVaccinated = PeopleFullyVaccinated/Population*100)
 

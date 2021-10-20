@@ -1,10 +1,14 @@
 # COVID-19 Vaccinations for Brazilian Municipalities
 
+![](joss/covid-19-vaccinations-in-brazil.png)
+
 The Ministry of Health, through the Information System of the National Immunization Program (SI-PNI), makes available data relating to the National Vaccination Campaign against Covid-19 [here](https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao).
 
-There is only a "small" problem... the dataset size is greater than 130GB! The dataset reports [32 variables](https://opendatasus.saude.gov.br/dataset/b772ee55-07cd-44d8-958f-b12edd004e0b/resource/38ead83d-b115-4219-852e-7244792bc311/download/dicionario-de-dados-vacinacao.pdf) for each single administrated dose.
+There is only a "small" problem... the dataset size is greater than 130GB! The dataset reports 30+ variables for each single administrated dose.
 
-This repository extracts the time-series of administrated doses from the dataset and makes it available in the form of lightweight ready-to-use CSV files.
+This repository extracts the time-series of administrated doses from the dataset and makes it available in the form of lightweight ready-to-use CSV files. 
+
+A visualization of the latest data is available [here](https://datawrapper.dwcdn.net/RBpM2/).
 
 ## CSV data files
 
