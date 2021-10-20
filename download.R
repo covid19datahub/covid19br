@@ -11,11 +11,16 @@ url <-
   rvest::html_nodes(sprintf('a:contains("Dados %s")', state)) %>% 
   rvest::html_attr('href')
 
+# Increase timeout to 1-hour and download
+options(timeout = 60*60)
+file <- tempfile(tmpdir = getwd())
+download.file(url, destfile = file, quiet = FALSE)
+
 # Compute vaccination data
 x <- 
   # download and read file
   data.table::fread(
-    url, 
+    cmd = sprintf("awk --field-separator=';' '{print $28\";\"$8\";\"$29}' %s", file), 
     select = c(
       "vacina_dataaplicacao" = "character", 
       "paciente_endereco_coibgemunicipio" = "character", 
@@ -23,8 +28,8 @@ x <-
     col.names = c("date", "ibge", "type"), 
     encoding = "UTF-8", 
     sep = ";",
-    header = TRUE,
     tmpdir = getwd(),
+    header = TRUE,
     data.table = FALSE,
     verbose = TRUE) %>%
   # sanitize fields
