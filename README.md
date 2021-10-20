@@ -37,9 +37,9 @@ This repository extracts the time-series of administrated doses from the 130GB d
 
 ## Data license
 
-- [Creative Commons Attribution](http://www.opendefinition.org/licenses/cc-by) 
+[![](https://opendatasus.saude.gov.br/base/images/od_80x15_blue.png)](http://opendefinition.org/okd/)
 
-  ![](https://opendatasus.saude.gov.br/base/images/od_80x15_blue.png)
+[Creative Commons Attribution](http://www.opendefinition.org/licenses/cc-by) 
 
 ## Workflows
 
