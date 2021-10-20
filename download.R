@@ -11,7 +11,8 @@ url <-
   rvest::html_nodes(sprintf('a:contains("Dados %s")', state)) %>% 
   rvest::html_attr('href')
 
-# Download in current directory
+# Increase timeout to 1-hour and download
+options(timeout = 60*60)
 file <- tempfile(tmpdir = getwd())
 download.file(url, destfile = file, quiet = FALSE)
 
