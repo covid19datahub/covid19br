@@ -6,23 +6,22 @@ The dataset is provided in a tidy data format, where each row represents an admi
 
 This repository extracts the time-series of administrated doses from the 130GB dataset and makes it available in the form of lightweight ready-to-use CSV files with the following structure:
 
-| field                      | description                                                  |
-| -------------------------- | ------------------------------------------------------------ |
-| `IBGE`                     | 7 digits IBGE code to identify Brazilian municipalities      |
-| `Municipio`                | The name of the municipality                                 |
-| `Population`               | The total population (2021)                                  |
-| `Date`                     | Date in the format YYYY-MM-DD                                |
-| `FirstDose`                | The cumulative number of first doses administrated that are part of a 2-doses vaccination cycle |
-| `SecondDose`               | The cumulative number of second doses administrated that are part of a 2-doses vaccination cycle |
-| `Dose`                     | The cumulative number of doses administrated that require only one shot |
-| `DoseAdicional`, `Reforço` | The cumulative number of additional doses administrated      |
+| field                   | description                                                  |
+| ----------------------- | ------------------------------------------------------------ |
+| `IBGE`                  | 7 digits IBGE code to identify Brazilian municipalities      |
+| `Municipio`             | The name of the municipality                                 |
+| `Population`            | The total population (2021)                                  |
+| `Date`                  | Date in the format YYYY-MM-DD                                |
+| `TotalVaccinations`     | Total number of COVID-19 vaccination doses administered      |
+| `PeopleVaccinated`      | Total number of people who received at least one vaccine dose |
+| `PeopleFullyVaccinated` | Total number of people who received all doses prescribed by the vaccination protocol |
 
 ## Data files
 
 - `population.csv`: contains the population data.
 
 - `vaccines.csv.gz`: contains the time-series vaccination data for each municipality. The file `vaccines-latest.csv` contains only the latest counts.
-- `data.csv.gz`: contains the vaccination data merged with population. This is the main file intended for re-use. The file `data-latest.csv` contains only the latest counts for each municipality. 
+- `data.csv.gz`: contains the time-series of vaccination data merged with population. The file `data-latest.csv` contains only the latest counts for each municipality. These are the main files intended for re-use.
 
 ## How it works
 
@@ -38,7 +37,7 @@ This repository extracts the time-series of administrated doses from the 130GB d
 
 ## Workflows
 
-- The data files are updated daily [![DATA](https://github.com/eguidotti/covid19br/actions/workflows/_data.yaml/badge.svg)](https://github.com/eguidotti/covid19br/actions/workflows/_data.yaml)
+The data files are updated daily [![DATA](https://github.com/eguidotti/covid19br/actions/workflows/_data.yaml/badge.svg)](https://github.com/eguidotti/covid19br/actions/workflows/_data.yaml)
 
 |Estados|Status|
 |-------|------|
