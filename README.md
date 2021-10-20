@@ -43,6 +43,8 @@ In this folder you can find the following CSV files:
 
 ## Workflows
 
+[![MASTER](https://github.com/eguidotti/covid19br/actions/workflows/master.yaml/badge.svg)](https://github.com/eguidotti/covid19br/actions/workflows/master.yaml)
+
 |Estados|Status|
 |-------|------|
 |Acre|[![Acre](https://github.com/eguidotti/covid19br/actions/workflows/AC.yaml/badge.svg)](https://github.com/eguidotti/covid19br/actions/workflows/AC.yaml)|
