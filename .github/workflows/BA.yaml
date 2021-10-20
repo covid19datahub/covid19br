@@ -1,6 +1,6 @@
 on:
   schedule: 
-    - cron:  '0 0 * * *' 
+    - cron:  '0 4 * * *' 
 
 name: Bahia
 
@@ -18,9 +18,6 @@ jobs:
           remove-dotnet: 'true'
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Disk Space
-        run: |
-          df -h
       - uses: r-lib/actions/setup-r@master
       - uses: r-lib/actions/setup-r-dependencies@v1
       - name: Download
