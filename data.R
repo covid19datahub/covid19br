@@ -20,6 +20,11 @@ latest <- master %>%
   dplyr::arrange(Date) %>%
   dplyr::filter(dplyr::row_number()==dplyr::n()-1)
 
+# Compute vaccination rate to update datawrapper
+datawrapper <- latest %>%
+  dplyr::mutate(PercFullyVaccinated = PeopleFullyVaccinated/Population)
+
 # Write output files in the root folder
 data.table::fwrite(master, file = "data.csv.gz", row.names = FALSE)
 data.table::fwrite(latest, file = "data-latest.csv", row.names = FALSE)
+data.table::fwrite(datawrapper, file = "datawrapper.csv", row.names = FALSE)
