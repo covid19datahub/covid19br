@@ -30,10 +30,16 @@ This repository extracts the time-series of administrated doses from the 130GB d
 - The script `vaccines.R` reads the data files from the folder `download` and generates the files `vaccines.csv.gz` and `vaccines-latest.csv`
 - The script `data.R` merges the files `vaccines.csv.gz` and `population.csv` to generate the files `data.csv.gz` and `data-latest.csv`
 
-## Data Sources
+## Data sources
 
 - The vaccination data are from the [Brazilian Ministry of Health](https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao)
 - The population data are from the [Instituto Brasileiro de Geografia e Estatística](https://www.ibge.gov.br/en/statistics/social/population/18448-estimates-of-resident-population-for-municipalities-and-federation-units.html)
+
+## Data license
+
+- [Creative Commons Attribution](http://www.opendefinition.org/licenses/cc-by) 
+
+  ![](https://opendatasus.saude.gov.br/base/images/od_80x15_blue.png)
 
 ## Workflows
 
