@@ -1,6 +1,4 @@
-on:
-  schedule: 
-    - cron:  '0 0 * * *' 
+on: push
 
 name: Mato Grosso do Sul
 
@@ -13,6 +11,7 @@ jobs:
       - name: Maximize build space
         uses: easimon/maximize-build-space@master
         with:
+          temp-reserve-mb: 40000
           root-reserve-mb: 512
           swap-size-mb: 1024
           remove-dotnet: 'true'
