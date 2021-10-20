@@ -1,10 +1,13 @@
-on: push
+on:
+  push:
+  schedule: 
+    - cron:  '0 0 * * *' 
 
 name: São Paulo
 
 jobs:
   download:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     env:
       STATE_CODE: SP
     steps:
@@ -12,7 +15,7 @@ jobs:
         uses: easimon/maximize-build-space@master
         with:
           root-reserve-mb: 512
-          swap-size-mb: 1024
+          swap-size-mb: 4096
           remove-dotnet: 'true'
       - name: Checkout
         uses: actions/checkout@v2
