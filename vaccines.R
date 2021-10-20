@@ -9,6 +9,9 @@ vaccines <-
   lapply(files, data.table::fread, encoding = "UTF-8", colClasses = c("IBGE6" = "character")) %>%
   # bind rows
   dplyr::bind_rows() %>%
+  # group by date, municipality and type of dose
+  dplyr::group_by(Date, IBGE6, Type) %>%
+  dplyr::summarise(N = dplyr::n()) %>%
   # pivot wider to list all types of doses
   tidyr::pivot_wider(id_cols = c("Date", "IBGE6"), names_from = "Type", values_from = "N", values_fill = list(N = 0)) %>%
   # group by municipality and cumulate

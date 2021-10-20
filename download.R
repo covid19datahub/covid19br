@@ -28,9 +28,10 @@ x <-
   dplyr::mutate(
     date = as.Date(date),
     ibge = gsub("\\D", "", ibge),
-    type = gsub("[ ª]", "", type),
+    type = gsub("[ª\\s]", "", type),
     type = gsub("1", "First", type),
-    type = gsub("2", "Second", type)) %>%
+    type = gsub("2", "Second", type),
+    type = gsub("3", "Third", type)) %>%
   # filter out invalid dates and ibge
   dplyr::filter(!is.na(date) & grepl("^\\d{6}$", ibge)) %>%
   # compute number of doses for each date, municipality and type of dose
