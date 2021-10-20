@@ -27,7 +27,7 @@ This repository extracts the time-series of administrated doses from the 130GB d
 
 - The script `download.R` is run by several workflows to download the data for each state. The output is saved in the folder `download`
 
-- The script `vaccines.R` reads the data files into the `download` folder and generates the files `vaccines.csv.gz` and `vaccines-latest.csv`
+- The script `vaccines.R` reads the data files from the folder `download` and generates the files `vaccines.csv.gz` and `vaccines-latest.csv`
 - The script `data.R` merges the files `vaccines.csv.gz` and `population.csv` to generate the files `data.csv.gz` and `data-latest.csv`
 
 ## Data Sources
@@ -37,7 +37,9 @@ This repository extracts the time-series of administrated doses from the 130GB d
 
 ## Workflows
 
-The data files are updated daily [![DATA](https://github.com/eguidotti/covid19br/actions/workflows/_data.yaml/badge.svg)](https://github.com/eguidotti/covid19br/actions/workflows/_data.yaml)
+[![DATA](https://github.com/eguidotti/covid19br/actions/workflows/_data.yaml/badge.svg)](https://github.com/eguidotti/covid19br/actions/workflows/_data.yaml)
+
+All the files are updated daily.
 
 |Estados|Status|
 |-------|------|
