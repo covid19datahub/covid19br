@@ -1,22 +1,10 @@
 # COVID-19 Vaccinations for Brazilian Municipalities
 
-![](covid-19-vaccinations-in-brazil.png)
-
 The Ministry of Health, through the Information System of the National Immunization Program (SI-PNI), makes available data relating to the National Vaccination Campaign against Covid-19 [here](https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao).
 
-There is only a "small" problem... the dataset size is greater than 130GB! The dataset reports 30+ variables for each single administrated dose.
+The dataset is provided in a tidy data format, where each row represents an administered COVID-19 dose. There are 250+ million records and 30+ variables associated with each record. The dataset is over 130GB.
 
-This repository extracts the time-series of administrated doses from the dataset and makes it available in the form of lightweight ready-to-use CSV files. 
-
-A visualization of the latest data is available [here](https://datawrapper.dwcdn.net/RBpM2/).
-
-## CSV data files
-
-You can find the following CSV files in this folder, both compressed (`.csv.gz`) and uncompressed (`.csv`):
-
-- `vaccines.csv`: contains vaccination data.
-- `population.csv`: contains population data.
-- `master.csv`: contains the vaccination data merged with population. This is the main file intended for re-use. The file `master-latest.csv` contains only the latest counts for each municipality. Both files have the following structure:
+This repository extracts the time-series of administrated doses from the 130GB dataset and makes it available in the form of lightweight ready-to-use CSV files with the following structure:
 
 | field                      | description                                                  |
 | -------------------------- | ------------------------------------------------------------ |
@@ -29,25 +17,28 @@ You can find the following CSV files in this folder, both compressed (`.csv.gz`)
 | `Dose`                     | The cumulative number of doses administrated that require only one shot |
 | `DoseAdicional`, `Reforço` | The cumulative number of additional doses administrated      |
 
+## Data files
+
+- `population.csv`: contains the population data.
+
+- `vaccines.csv.gz`: contains the time-series vaccination data for each municipality. The file `vaccines-latest.csv` contains only the latest counts.
+- `data.csv.gz`: contains the vaccination data merged with population. This is the main file intended for re-use. The file `data-latest.csv` contains only the latest counts for each municipality. 
+
+## How it works
+
+- The script `download.R` is run by several workflows to download the data for each state. The output is saved in the folder `download`
+
+- The script `vaccines.R` reads the data files into the `download` folder and generates the files `vaccines.csv.gz` and `vaccines-latest.csv`
+- The script `data.R` merges the files `vaccines.csv.gz` and `population.csv` to generate the files `data.csv.gz` and `data-latest.csv`
+
 ## Data Sources
 
 - The vaccination data are from the [Brazilian Ministry of Health](https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao)
 - The population data are from the [Instituto Brasileiro de Geografia e Estatística](https://www.ibge.gov.br/en/statistics/social/population/18448-estimates-of-resident-population-for-municipalities-and-federation-units.html)
 
-## How it works
-
-- The script `download.R` is run by several workflows (below) to download the data for each state. The output is saved in the folder `download`
-
-- The script `vaccines.R` reads the data files into the `download` folder and generates the file `vaccines.csv`
-- The script `master.R` merges the files `vaccines.csv` and `population.csv` to generate the files `master.csv` and `master-latest.csv`
-
-## Update frequency
-
-- Daily
-
 ## Workflows
 
-[![DATA](https://github.com/eguidotti/covid19br/actions/workflows/_data.yaml/badge.svg)](https://github.com/eguidotti/covid19br/actions/workflows/_data.yaml)
+- The data files are updated daily [![DATA](https://github.com/eguidotti/covid19br/actions/workflows/_data.yaml/badge.svg)](https://github.com/eguidotti/covid19br/actions/workflows/_data.yaml)
 
 |Estados|Status|
 |-------|------|
@@ -78,3 +69,9 @@ You can find the following CSV files in this folder, both compressed (`.csv.gz`)
 |São Paulo|[![São Paulo](https://github.com/eguidotti/covid19br/actions/workflows/SP.yaml/badge.svg)](https://github.com/eguidotti/covid19br/actions/workflows/SP.yaml)|
 |Sergipe|[![Sergipe](https://github.com/eguidotti/covid19br/actions/workflows/SE.yaml/badge.svg)](https://github.com/eguidotti/covid19br/actions/workflows/SE.yaml)|
 |Tocantins|[![Tocantins](https://github.com/eguidotti/covid19br/actions/workflows/TO.yaml/badge.svg)](https://github.com/eguidotti/covid19br/actions/workflows/TO.yaml)|
+
+## Visualization
+
+An interactive visualization of the latest data is available [here](https://datawrapper.dwcdn.net/RBpM2/).
+
+![](covid-19-vaccinations-in-brazil.png)
