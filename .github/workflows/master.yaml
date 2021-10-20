@@ -18,6 +18,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add vaccines.csv master.csv
+          git add vaccines.csv master.csv master-latest.csv
           git commit --allow-empty -m "Automated Update"
           git push
