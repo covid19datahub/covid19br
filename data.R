@@ -22,7 +22,7 @@ latest <- master %>%
 
 # Compute vaccination rate to update datawrapper
 datawrapper <- latest %>%
-  dplyr::mutate(PercFullyVaccinated = PeopleFullyVaccinated/Population)
+  dplyr::mutate(PercFullyVaccinated = PeopleFullyVaccinated/Population*100)
 
 # Write output files in the root folder
 data.table::fwrite(master, file = "data.csv.gz", row.names = FALSE)

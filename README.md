@@ -43,7 +43,7 @@ You can find the following CSV files in this folder, both compressed (`.csv.gz`)
 
 ## Workflows
 
-[![MASTER](https://github.com/eguidotti/covid19br/actions/workflows/master.yaml/badge.svg)](https://github.com/eguidotti/covid19br/actions/workflows/master.yaml)
+[![DATA](https://github.com/eguidotti/covid19br/actions/workflows/_data.yaml/badge.svg)](https://github.com/eguidotti/covid19br/actions/workflows/_data.yaml)
 
 |Estados|Status|
 |-------|------|
