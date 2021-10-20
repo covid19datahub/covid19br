@@ -9,6 +9,7 @@ vaccines <-
   lapply(files, data.table::fread, encoding = "UTF-8", colClasses = c("IBGE6" = "character")) %>%
   # bind rows
   dplyr::bind_rows() %>%
+  dplyr::mutate(Type = gsub("\\s", "", Type)) %>%
   # group by date, municipality and type of dose
   dplyr::group_by(Date, IBGE6, Type) %>%
   dplyr::summarise(N = sum(N)) %>%

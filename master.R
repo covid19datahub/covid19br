@@ -18,7 +18,7 @@ master <- dplyr::select(master, -IBGE6)
 latest <- master %>%
   dplyr::group_by(IBGE) %>%
   dplyr::arrange(Date) %>%
-  dplyr::filter(dplyr::row_number()==dplyr::n())
+  dplyr::filter(dplyr::row_number()==dplyr::n()-1)
 
 # Write output files in the root folder
 data.table::fwrite(master, file = "master.csv", row.names = FALSE)
