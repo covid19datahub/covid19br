@@ -36,7 +36,7 @@ x <-
   dplyr::mutate(
     date = as.Date(date),
     ibge = gsub("\\D", "", ibge),
-    type = gsub("\\s|ª", "", type),
+    type = gsub("\\s|[ªº]", "", type),
     type = gsub("1", "First", type),
     type = gsub("2", "Second", type),
     type = gsub("3", "Third", type)) %>%
