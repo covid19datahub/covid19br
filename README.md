@@ -1,3 +1,48 @@
+# COVID-19 Vaccinations for Brazilian Municipalities
+
+The Ministry of Health, through the Information System of the National Immunization Program (SI-PNI), makes available data relating to the National Vaccination Campaign against Covid-19 [here](https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao).
+
+There is only a "small" problem... the dataset size is greater than 130GB! The dataset reports [32 variables](https://opendatasus.saude.gov.br/dataset/b772ee55-07cd-44d8-958f-b12edd004e0b/resource/38ead83d-b115-4219-852e-7244792bc311/download/dicionario-de-dados-vacinacao.pdf) for each single administrated dose.
+
+This repository extracts the time-series of administrated doses from the dataset and makes it available in the form of lightweight ready-to-use CSV files.
+
+## CSV data files
+
+In this folder you can find the following CSV files:
+
+- `vaccines.csv`: contains vaccination data.
+- `population.csv`: contains population data.
+- `master.csv`: contains the vaccination data merged with population. This is the main file intended for re-use and has the following structure.
+
+| field                      | description                                                  |
+| -------------------------- | ------------------------------------------------------------ |
+| `IBGE`                     | 7 digits IBGE code to identify Brazilian municipalities      |
+| `Municipio`                | The name of the municipality                                 |
+| `Population`               | The total population (2021)                                  |
+| `Date`                     | Date in the format YYYY-MM-DD                                |
+| `FirstDose`                | The cumulative number of first doses administrated that are part of a 2-doses vaccination cycle |
+| `SecondDose`               | The cumulative number of second doses administrated that are part of a 2-doses vaccination cycle |
+| `Dose`                     | The cumulative number of doses administrated that require only one shot |
+| `DoseAdicional`, `Reforço` | The cumulative number of additional doses administrated      |
+
+## Data Sources
+
+- The vaccination data are from the [Brazilian Ministry of Health](https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao)
+- The population data are from the [Instituto Brasileiro de Geografia e Estatística](https://www.ibge.gov.br/en/statistics/social/population/18448-estimates-of-resident-population-for-municipalities-and-federation-units.html)
+
+## How it works
+
+- The script `download.R` is run by several workflows (below) to download the data for each state. The output is saved in the folder `download`. 
+
+- The script `vaccines.R` reads the data files in `download` and generates the file `vaccines.csv`
+- The script `master.R` merges the files `vaccines.csv` and `population.csv` to generate the data file `master.csv`
+
+## Update frequency
+
+- Daily
+
+## Workflows
+
 |Estados|Status|
 |-------|------|
 |Acre|[![Acre](https://github.com/eguidotti/covid19br/actions/workflows/AC.yaml/badge.svg)](https://github.com/eguidotti/covid19br/actions/workflows/AC.yaml)|
