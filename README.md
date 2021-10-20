@@ -8,11 +8,11 @@ This repository extracts the time-series of administrated doses from the dataset
 
 ## CSV data files
 
-In this folder you can find the following CSV files:
+You can find the following CSV files in this folder:
 
 - `vaccines.csv`: contains vaccination data.
 - `population.csv`: contains population data.
-- `master.csv`: contains the vaccination data merged with population. This is the main file intended for re-use and has the following structure.
+- `master.csv`: contains the vaccination data merged with population. This is the main file intended for re-use. The file `master-latest.csv` contains only the latest counts for each municipality. Both files have the following structure:
 
 | field                      | description                                                  |
 | -------------------------- | ------------------------------------------------------------ |
@@ -32,10 +32,10 @@ In this folder you can find the following CSV files:
 
 ## How it works
 
-- The script `download.R` is run by several workflows (below) to download the data for each state. The output is saved in the folder `download`. 
+- The script `download.R` is run by several workflows (below) to download the data for each state. The output is saved in the folder `download`
 
-- The script `vaccines.R` reads the data files in `download` and generates the file `vaccines.csv`
-- The script `master.R` merges the files `vaccines.csv` and `population.csv` to generate `master.csv`
+- The script `vaccines.R` reads the data files into the `download` folder and generates the file `vaccines.csv`
+- The script `master.R` merges the files `vaccines.csv` and `population.csv` to generate the files `master.csv` and `master-latest.csv`
 
 ## Update frequency
 
