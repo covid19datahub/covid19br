@@ -11,8 +11,8 @@ url <-
   rvest::html_nodes(sprintf('a:contains("Dados %s")', state)) %>% 
   rvest::html_attr('href')
 
-# Download
-file <- tempfile()
+# Download in current directory
+file <- tempfile(tmpdir = getwd())
 download.file(url, destfile = file, quiet = FALSE)
 
 # Compute vaccination data

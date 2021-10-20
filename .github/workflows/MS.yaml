@@ -11,15 +11,11 @@ jobs:
       - name: Maximize build space
         uses: easimon/maximize-build-space@master
         with:
-          build-mount-path: '/mnt'
           root-reserve-mb: 512
           swap-size-mb: 1024
           remove-dotnet: 'true'
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Disk Space
-        run: |
-          df -h
       - uses: r-lib/actions/setup-r@master
       - uses: r-lib/actions/setup-r-dependencies@v1
       - name: Download
