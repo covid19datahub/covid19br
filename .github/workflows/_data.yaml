@@ -3,10 +3,10 @@ on:
   schedule: 
     - cron:  '0 6 * * *' 
 
-name: MASTER
+name: DATA
 
 jobs:
-  master:
+  data:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -16,11 +16,11 @@ jobs:
       - name: Run Scripts
         run: |
           Rscript vaccines.R
-          Rscript master.R
+          Rscript data.R
       - name: Deploy Files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add vaccines.csv vaccines.csv.gz master.csv master.csv.gz master-latest.csv master-latest.csv.gz
+          git add vaccines.csv.gz vaccines-latest.csv data.csv.gz data-latest.csv
           git commit --allow-empty -m "Automated Update"
           git push
