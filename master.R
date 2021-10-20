@@ -22,4 +22,6 @@ latest <- master %>%
 
 # Write output files in the root folder
 data.table::fwrite(master, file = "master.csv", row.names = FALSE)
+data.table::fwrite(master, file = "master.csv.gz", row.names = FALSE)
 data.table::fwrite(latest, file = "master-latest.csv", row.names = FALSE)
+data.table::fwrite(latest, file = "master-latest.csv.gz", row.names = FALSE)

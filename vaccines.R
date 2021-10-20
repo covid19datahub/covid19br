@@ -23,3 +23,4 @@ vaccines <-
 
 # Write output files in the root folder
 data.table::fwrite(vaccines, file = "vaccines.csv", row.names = FALSE)
+data.table::fwrite(vaccines, file = "vaccines.csv.gz", row.names = FALSE)

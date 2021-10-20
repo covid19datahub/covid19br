@@ -8,7 +8,7 @@ This repository extracts the time-series of administrated doses from the dataset
 
 ## CSV data files
 
-You can find the following CSV files in this folder:
+You can find the following CSV files in this folder, both compressed (`.csv.gz`) and uncompressed (`.csv`):
 
 - `vaccines.csv`: contains vaccination data.
 - `population.csv`: contains population data.

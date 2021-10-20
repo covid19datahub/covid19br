@@ -1,4 +1,4 @@
 Package: covid19br
 Version: 1.0.0
 Description: Simply list the dependencies needed to run the scripts.
-Imports: curl, data.table, dplyr, tidyr, rvest
+Imports: R.utils, curl, data.table, dplyr, tidyr, rvest
