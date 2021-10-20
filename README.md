@@ -35,7 +35,7 @@ In this folder you can find the following CSV files:
 - The script `download.R` is run by several workflows (below) to download the data for each state. The output is saved in the folder `download`. 
 
 - The script `vaccines.R` reads the data files in `download` and generates the file `vaccines.csv`
-- The script `master.R` merges the files `vaccines.csv` and `population.csv` to generate the data file `master.csv`
+- The script `master.R` merges the files `vaccines.csv` and `population.csv` to generate `master.csv`
 
 ## Update frequency
 
