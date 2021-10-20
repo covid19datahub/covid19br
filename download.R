@@ -12,10 +12,14 @@ url <-
   rvest::html_attr('href')
 
 # Download
+file <- tempfile()
+download.file(url, destfile = file, quiet = FALSE)
+
+# Compute vaccination data
 x <- 
-  # read data
+  # read file
   data.table::fread(
-    url, 
+    file, 
     encoding = "UTF-8", 
     select = c("vacina_dataaplicacao", "paciente_endereco_coibgemunicipio", "vacina_descricao_dose"), 
     col.names = c("date", "ibge", "type")) %>%
