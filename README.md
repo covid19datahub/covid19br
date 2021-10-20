@@ -1,6 +1,6 @@
 # COVID-19 Vaccinations for Brazilian Municipalities
 
-![](joss/covid-19-vaccinations-in-brazil.png)
+![](covid-19-vaccinations-in-brazil.png)
 
 The Ministry of Health, through the Information System of the National Immunization Program (SI-PNI), makes available data relating to the National Vaccination Campaign against Covid-19 [here](https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao).
 
