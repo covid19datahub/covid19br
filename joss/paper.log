@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 2.9.7300 64-bit) (preloaded format=xelatex 2020.3.22)  21 OCT 2021 15:34
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 2.9.7300 64-bit) (preloaded format=xelatex 2020.3.22)  21 OCT 2021 17:14
 entering extended mode
 **./paper.tex
 (paper.tex
@@ -1386,7 +1386,7 @@ File: C:/Users/Emanuele/Documents/R/win-library/4.0/rticles/rmarkdown/templates
 <C:/Users/Emanuele/Documents/R/win-library/4.0/rticles/rmarkdown/templates/joss
 _article/resources/JOSS-logo.png>
 [2]
-Overfull \hbox (9.5441pt too wide) in paragraph at lines 429--430
+Overfull \hbox (9.5441pt too wide) in paragraph at lines 428--429
 []\TU/lmtt/m/n/10 PeopleFullyVaccinated|  
  []
 
@@ -1407,11 +1407,11 @@ File: C:/Users/Emanuele/Documents/R/win-library/4.0/rticles/rmarkdown/templates
 <C:/Users/Emanuele/Documents/R/win-library/4.0/rticles/rmarkdown/templates/joss
 _article/resources/JOSS-logo.png>
 [5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 525.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 525.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 524.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 524.
 (paper.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 525.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 525.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 524.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 524.
 Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: 31290569BC663C2D508ACAA615DD2C9B;507.
 Package logreq Info: Writing requests to 'paper.run.xml'.
