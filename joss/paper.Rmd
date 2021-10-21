@@ -6,11 +6,9 @@ tags:
 authors:
   - name: Emanuele Guidotti
     orcid: 0000-0002-8961-6623
-    affiliation: "1"
 affiliations:
  - name: University of Neuchâtel, Switzerland
-   index: 1
-citation_author: Guidotti
+citation_author: Guidotti E.
 date: 20 Oct 2021
 year: 2021
 output: rticles::joss_article
@@ -34,7 +32,7 @@ This work joins the ongoing global efforts around the topic of COVID-19 data col
 
 # Workflow
 
-Working with large files poses several issues. First, a high-speed internet connection is needed to download the data file. Second, the disk size must be sufficienly large to store the data. Third, the data must be efficiently loaded in memory to avoid memory leaks. These issues are especially relevant when we rely exclusively on freely available resources.
+Working with large files poses several issues. First, a high-speed internet connection is needed to download the data file. Second, the disk size must be sufficiently large to store the data. Third, the data must be efficiently loaded in memory to avoid memory leaks. These issues are especially relevant when we rely exclusively on freely available resources.
 
 ## Working with large files and limited resources
 
@@ -48,7 +46,7 @@ The Ministry of Health of Brazil is providing the dataset in two ways: (1) a uni
 
 Although the disk space available is only 14GB, public Github-hosted runners are using Azure DS2_v2 virtual machines, featuring a 84GB OS disk at the time of writing. In principle, it should be possible to remove unwanted preinstalled software and make additional space available for our data acquisition pipeline. To maximize the available disk space, we can rely on a GitHub action that increases the disk space up to 50GB.^[https://github.com/easimon/maximize-build-space] It is now possible to download the CSV data by state. 
 
-To read the large files efficiently in R [@r], a typical approach is to use the function `fread` from the package `data.table` [@data.table]. One issue is that `fread` always has to map the entire file to memory^[https://github.com/Rdatatable/data.table/issues/3526], which is too limited (7GB) with respect to the size of the data. To reduce the size of the data on disk, the `awk` Linux utility is used to extract only three columns from the original CSV file: date of vaccination, municipality of residence, and type of vaccination dose. This reduces the size of the data file by a factor of 10, which is enough to finally load the data into memory. 
+To read the large files efficiently in R [@r], a typical approach is to use the function `fread` from the package `data.table` [@data.table]. One issue is that `fread` always has to map the entire file to memory^[https://github.com/Rdatatable/data.table/issues/3526], which is too limited (7GB) with respect to the size of the data. To reduce the size of the data on disk, the `awk` Linux utility is used to extract only three columns from the original CSV file: date of vaccination, municipality of residence, and type of vaccine dose. This reduces the size of the data file by a factor of 10, which is enough to finally load the data into memory. 
 
 | Requirements | Adopted Solution |
 |--------------|------------------|
@@ -78,7 +76,7 @@ The data extracted are made available in the form of lightweight, ready-to-use C
 | `Municipio`             | The name of the municipality                                 |
 | `Population`            | The total population (2021)                                  |
 | `Date`                  | Date in the format YYYY-MM-DD                                |
-| `TotalVaccinations`     | Total number of COVID-19 vaccination doses administered      |
+| `TotalVaccinations`     | Total number of COVID-19 vaccine doses administered      |
 | `PeopleVaccinated`      | Total number of people with at least one vaccine dose |
 | `PeopleFullyVaccinated` | Total number of people that completed the vaccination cycle |
 

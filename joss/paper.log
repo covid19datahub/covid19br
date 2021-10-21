@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 2.9.7300 64-bit) (preloaded format=xelatex 2020.3.22)  21 OCT 2021 17:14
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 2.9.7300 64-bit) (preloaded format=xelatex 2020.3.22)  21 OCT 2021 21:46
 entering extended mode
 **./paper.tex
 (paper.tex
@@ -1327,12 +1327,24 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
+Package hyperref Warning: Suppressing link with empty target on input line 225.
+
+
+
+Package hyperref Warning: Suppressing link with empty target on input line 225.
+
+
+
+Package hyperref Warning: Suppressing link with empty target on input line 225.
+
+
+
 ("C:\Users\Emanuele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt-cm
 r.cfg"
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 199
+LaTeX Font Info:    Trying to load font information for U+msa on input line 233
 .
 
 ("C:\Users\Emanuele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.f
@@ -1343,7 +1355,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 a.cfg"
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 199
+LaTeX Font Info:    Trying to load font information for U+msb on input line 233
 .
 
 ("C:\Users\Emanuele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.f
@@ -1354,18 +1366,6 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 b.cfg"
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-
-Package hyperref Warning: Suppressing link with empty target on input line 225.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 225.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 225.
-
-
 File: C:/Users/Emanuele/Documents/R/win-library/4.0/rticles/rmarkdown/templates
 /joss_article/resources/JOSS-logo.png Graphic file (type bmp)
 <C:/Users/Emanuele/Documents/R/win-library/4.0/rticles/rmarkdown/templates/joss
@@ -1419,11 +1419,11 @@ Package logreq Info: Writing requests to 'paper.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34948 strings out of 414567
- 686237 string characters out of 2904910
- 1407794 words of memory out of 3000000
- 51575 multiletter control sequences out of 15000+200000
- 539210 words of font info for 72 fonts, out of 3000000 for 9000
+ 34931 strings out of 414567
+ 685936 string characters out of 2904910
+ 1407800 words of memory out of 3000000
+ 51561 multiletter control sequences out of 15000+200000
+ 537657 words of font info for 65 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
  60i,12n,75p,1196b,788s stack positions out of 5000i,500n,10000p,200000b,50000s
 
