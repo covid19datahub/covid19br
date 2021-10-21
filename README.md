@@ -93,9 +93,9 @@ A BibTeX entry for LaTeX users is:
 
 ```latex
 @unpublished{covid19br,
-  author = "Emanuele Guidotti",
-  title = "Crunching COVID-19 Vaccination Data for Brazilian Municipalities",
-  note = "Working Paper",
+  author = {Emanuele Guidotti},
+  title = {Crunching COVID-19 Vaccination Data for Brazilian Municipalities},
+  note = {Working Paper},
   url = {https://github.com/eguidotti/covid19br/blob/main/joss/paper.pdf} 
 }
 ```
