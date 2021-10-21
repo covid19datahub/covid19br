@@ -19,7 +19,7 @@ This repository extracts the time-series of administrated doses from the 130GB d
 ## Data files
 
 - `population.csv`: contains the population data. 
-- https://raw.githubusercontent.com/eguidotti/covid19br/main/population.csv 
+  - https://raw.githubusercontent.com/eguidotti/covid19br/main/population.csv 
 - `vaccines.csv.gz`: contains the time-series vaccination data for each municipality. The file `vaccines-latest.csv` contains only the latest counts.
   - https://raw.githubusercontent.com/eguidotti/covid19br/main/vaccines.csv.gz
   - https://raw.githubusercontent.com/eguidotti/covid19br/main/vaccines-latest.csv
