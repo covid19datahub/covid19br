@@ -1,6 +1,6 @@
 on:
   schedule: 
-    - cron:  '0 0 * * *' 
+    - cron:  '50 1 * * *' 
 
 name: Rio Grande do Sul
 
