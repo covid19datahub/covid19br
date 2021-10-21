@@ -32,7 +32,7 @@ This repository extracts the time-series of administrated doses from the 130GB d
 
 ## Data sources
 
-- The vaccination data are from the [Brazilian Ministry of Health](https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao)
+- The vaccination data are from the [Ministério da Saúde](https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao)
 - The population data are from the [Instituto Brasileiro de Geografia e Estatística](https://www.ibge.gov.br/en/statistics/social/population/18448-estimates-of-resident-population-for-municipalities-and-federation-units.html)
 
 ## Data license
