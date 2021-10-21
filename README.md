@@ -81,4 +81,4 @@ All the files are updated daily.
 
 An interactive visualization of the latest data is available [here](https://datawrapper.dwcdn.net/RBpM2/).
 
-![](covid-19-vaccinations-in-brazil.png)
+![](joss/covid-19-vaccinations-in-brazil.png)
