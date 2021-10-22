@@ -111,4 +111,4 @@ A BibTeX entry for LaTeX users is:
 }
 ```
 
-You can find the working paper [here](https://github.com/eguidotti/covid19br/blob/main/joss/paper.pdf)
+You can find the working paper [here](https://github.com/eguidotti/covid19br/blob/main/joss/paper.pdf) 
