@@ -1,6 +1,6 @@
 # COVID-19 Vaccinations for Brazilian Municipalities [![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Feguidotti%2Fcovid19br)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Feguidotti%2Fcovid19br)
 
-This repository extracts the time-series of administrated COVID-19 vaccine doses for Brazilian municipalities from the 130GB dataset published on [this webpage](https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao) by the Ministry of Health, through the Information System of the National Immunization Program (SI-PNI).
+This repository extracts the time-series of administrated COVID-19 vaccine doses for Brazilian municipalities from the 130GB dataset published on [this webpage](https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao) by the Ministry of Health of Brazil, through the Information System of the National Immunization Program (SI-PNI).
 
 The data extracted are available in the form of ready-to-use CSV files with the following structure:
 
