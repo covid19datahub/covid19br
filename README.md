@@ -1,10 +1,8 @@
-# COVID-19 Vaccinations for Brazilian Municipalities
+# COVID-19 Vaccinations for Brazilian Municipalities [![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Feguidotti%2Fcovid19br)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Feguidotti%2Fcovid19br)
 
-The Ministry of Health, through the Information System of the National Immunization Program (SI-PNI), makes available data relating to the National Vaccination Campaign against Covid-19 [here](https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao).
+This repository extracts the time-series of administrated COVID-19 vaccine doses for Brazilian municipalities from the 130GB dataset published on [this webpage](https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao) by the Ministry of Health, through the Information System of the National Immunization Program (SI-PNI).
 
-The dataset is provided in a tidy data format, where each row represents an administered COVID-19 dose. There are 250+ million records and 30+ variables associated with each record. The dataset is over 130GB.
-
-This repository extracts the time-series of administrated doses from the 130GB dataset and makes it available in the form of lightweight ready-to-use CSV files with the following structure:
+The data extracted are available in the form of ready-to-use CSV files with the following structure:
 
 | field                   | description                                                  |
 | ----------------------- | ------------------------------------------------------------ |
@@ -18,18 +16,29 @@ This repository extracts the time-series of administrated doses from the 130GB d
 
 ## Data files
 
-- `population.csv`: contains the population data. 
-  - https://raw.githubusercontent.com/eguidotti/covid19br/main/population.csv 
-- `vaccines.csv.gz`: contains the time-series vaccination data for each municipality. The file `vaccines-latest.csv` contains only the latest counts.
-  - https://raw.githubusercontent.com/eguidotti/covid19br/main/vaccines.csv.gz
-  - https://raw.githubusercontent.com/eguidotti/covid19br/main/vaccines-latest.csv
-- `data.csv.gz`: contains the time-series of vaccination data merged with population. The file `data-latest.csv` contains only the latest counts for each municipality. These are the main files intended for re-use.
+Main files intended for re-use:
+
+- `data.csv.gz`: contains the time-series of the vaccination data, merged with population
   - https://raw.githubusercontent.com/eguidotti/covid19br/main/data.csv.gz
+- `data-latest.csv`: contains only the latest counts in `data.csv.gz`
   - https://raw.githubusercontent.com/eguidotti/covid19br/main/data-latest.csv
+
+Additional files:
+
+- `vaccines.csv.gz`: contains the time-series of the vaccination data
+	- https://raw.githubusercontent.com/eguidotti/covid19br/main/vaccines.csv.gz
+- `vaccines-latest.csv` contains only the latest counts in `vaccines.csv.gz`
+  - https://raw.githubusercontent.com/eguidotti/covid19br/main/vaccines-latest.csv
+- `population.csv`: contains the estimated population for each municipality in 2021.
+  - https://raw.githubusercontent.com/eguidotti/covid19br/main/population.csv 
+
+## Update frequency
+
+- The files are updated daily
 
 ## How it works
 
-- The script `download.R` is run by several workflows to download the data for each state. The output is saved in the folder `download`
+- The script `download.R` is run by several [workflows](https://github.com/eguidotti/covid19br/actions) to download the data for each state. The output is saved in the folder `download`
 
 - The script `vaccines.R` reads the data files from the folder `download` and generates the files `vaccines.csv.gz` and `vaccines-latest.csv`
 - The script `data.R` merges the files `vaccines.csv.gz` and `population.csv` to generate the files `data.csv.gz` and `data-latest.csv`
@@ -48,8 +57,6 @@ This repository extracts the time-series of administrated doses from the 130GB d
 ## Workflows
 
 [![DATA](https://github.com/eguidotti/covid19br/actions/workflows/_data.yaml/badge.svg)](https://github.com/eguidotti/covid19br/actions/workflows/_data.yaml)
-
-All the files are updated daily.
 
 |Estados|Status|
 |-------|------|
