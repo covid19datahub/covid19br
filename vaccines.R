@@ -14,7 +14,8 @@ oneshot <- c("Única", "Dose")
 
 # Other extra doses
 extra <- c("ThirdDose", "DoseAdicional", "FirstReforço", "Reforço",
-           "FirstDoseRevacinação", "SecondDoseRevacinação")
+           "FirstDoseRevacinação", "SecondDoseRevacinação",
+           "ThirdReforço", "Revacinação")
 
 # Compute cumulative number of doses
 vaccines <- 
