@@ -10,7 +10,7 @@ first <- c("FirstDose", "DoseInicial")
 second <- c("SecondDose")
 
 # Unique dose of a one-shot vaccination cycle
-oneshot <- c("Única", "Dose")
+oneshot <- c("Única", "Dose", "Tratamentocomumadose")
 
 # Other extra doses
 extra <- c("ThirdDose", "DoseAdicional", "FirstReforço", "Reforço",
