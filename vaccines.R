@@ -7,16 +7,23 @@ files <- list.files("download", full.names = TRUE)
 first <- c("FirstDose", "DoseInicial")
 
 # Second dose of a 2-doses vaccination cycle
-second <- c("SecondDose")
+second <- c("SecondDose", "Tratamentocomduasdoses")
 
 # Unique dose of a one-shot vaccination cycle
 oneshot <- c("Única", "Dose", "Tratamentocomumadose")
 
 # Other extra doses
-extra <- c("ThirdDose", "DoseAdicional", "FirstReforço", "Reforço",
-           "FirstDoseRevacinação", "SecondDoseRevacinação",
-           "ThirdReforço", "Revacinação", 
-		   "Tratamentocomdezessetedoses") 
+extra <- c(
+  "ThirdDose", "DoseAdicional", "FirstReforço", "Reforço",
+  "FirstDoseRevacinação", "SecondDoseRevacinação",
+  "ThirdReforço", "Revacinação", 
+  "Tratamentocomdezessetedoses", "Tratamentocomseisdoses", "ThirdDoseRevacinação", 
+  "Tratamentocomquatrodoses", "Tratamentocomtrêsdoses", 
+  "Tratamentocomcincodoses", "4DoseRevacinação", "6Reforço", 
+  "Tratamentocomsetedoses", "Tratamentocomdozedoses", "5Reforço", 
+  "Tratamentocomquinzedoses", "Tratamentocomdezdoses", "4Reforço", 
+  "Tratamentocomquartorzedoses", "Tratamentocomnovedoses", 
+  "Tratamentocomtrezedoses") 
 
 # Compute cumulative number of doses
 vaccines <- 
