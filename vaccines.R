@@ -16,7 +16,7 @@ oneshot <- c("Única", "Dose", "Tratamentocomumadose")
 extra <- c(
   "ThirdDose", "DoseAdicional", "FirstReforço", "Reforço",
   "FirstDoseRevacinação", "SecondDoseRevacinação",
-  "ThirdReforço", "Revacinação", 
+  "ThirdReforço", "Revacinação", "SecondReforço", "4Dose", "5Dose",
   "Tratamentocomdezessetedoses", "Tratamentocomseisdoses", "ThirdDoseRevacinação", 
   "Tratamentocomquatrodoses", "Tratamentocomtrêsdoses", 
   "Tratamentocomcincodoses", "4DoseRevacinação", "6Reforço", 
