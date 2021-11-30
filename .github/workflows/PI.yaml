@@ -1,6 +1,6 @@
 on:
   schedule: 
-    - cron:  '20 1 * * *' 
+    - cron:  '20 7 * * *' 
 
 name: Piauí
 

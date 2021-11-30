@@ -1,6 +1,6 @@
 on:
   schedule: 
-    - cron:  '30 1 * * *' 
+    - cron:  '30 7 * * *' 
 
 name: Rio de Janeiro
 
