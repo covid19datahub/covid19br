@@ -1,6 +1,6 @@
 on:
   schedule: 
-    - cron:  '25 6 * * *' 
+    - cron:  '25 11 * * *' 
 
 name: Ceará
 

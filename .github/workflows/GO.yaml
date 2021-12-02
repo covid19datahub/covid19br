@@ -1,6 +1,6 @@
 on:
   schedule: 
-    - cron:  '40 6 * * *' 
+    - cron:  '40 11 * * *' 
 
 name: Goiás
 

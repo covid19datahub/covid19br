@@ -1,6 +1,6 @@
 on:
   schedule: 
-    - cron:  '45 6 * * *' 
+    - cron:  '45 11 * * *' 
 
 name: Maranhão
 

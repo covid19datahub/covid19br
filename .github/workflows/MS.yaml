@@ -1,6 +1,6 @@
 on:
   schedule: 
-    - cron:  '55 6 * * *' 
+    - cron:  '55 11 * * *' 
 
 name: Mato Grosso do Sul
 

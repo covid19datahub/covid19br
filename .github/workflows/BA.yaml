@@ -1,6 +1,6 @@
 on:
   schedule: 
-    - cron:  '20 6 * * *' 
+    - cron:  '20 11 * * *' 
 
 name: Bahia
 

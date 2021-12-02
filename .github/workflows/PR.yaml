@@ -1,6 +1,6 @@
 on:
   schedule: 
-    - cron:  '25 7 * * *' 
+    - cron:  '25 12 * * *' 
 
 name: Paraná
 
