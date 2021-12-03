@@ -1,6 +1,6 @@
 on:
   schedule: 
-    - cron:  '50 11 * * *' 
+    - cron:  '50 6 * * *' 
 
 name: Minas Gerais
 

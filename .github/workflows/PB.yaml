@@ -1,6 +1,6 @@
 on:
   schedule: 
-    - cron:  '10 12 * * *' 
+    - cron:  '10 7 * * *' 
 
 name: Paraíba
 

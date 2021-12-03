@@ -1,6 +1,6 @@
 on:
   schedule: 
-    - cron:  '35 11 * * *' 
+    - cron:  '35 6 * * *' 
 
 name: Espírito Santo
 

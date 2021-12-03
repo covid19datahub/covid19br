@@ -1,6 +1,6 @@
 on:
   schedule: 
-    - cron:  '5 12 * * *' 
+    - cron:  '5 7 * * *' 
 
 name: Pará
 

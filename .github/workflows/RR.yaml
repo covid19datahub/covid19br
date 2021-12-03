@@ -1,6 +1,6 @@
 on:
   schedule: 
-    - cron:  '45 12 * * *' 
+    - cron:  '45 7 * * *' 
 
 name: Roraima
 

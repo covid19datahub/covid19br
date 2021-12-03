@@ -1,6 +1,6 @@
 on:
   schedule: 
-    - cron:  '35 12 * * *' 
+    - cron:  '35 7 * * *' 
 
 name: Rio Grande do Norte
 
