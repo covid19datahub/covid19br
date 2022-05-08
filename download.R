@@ -29,7 +29,7 @@ x <- lapply(urls, function(url){
   download.file(url, destfile = file, quiet = FALSE)
   
   # read file
-  data.table::fread(
+  x <- data.table::fread(
     cmd = sprintf("awk -F ';' '{print $28\";\"$8\";\"$29}' %s", file), 
     select = c(
       "vacina_dataAplicacao" = "character", 
@@ -65,6 +65,10 @@ x <- lapply(urls, function(url){
   dplyr::mutate(date = format(date, "%Y-%m-%d")) %>%
   # capitalize columns
   dplyr::rename(Date = date, IBGE6 = ibge, Type = type, N = n)
+  
+  # free up disk space and return
+  unlink(file)
+  return(x)
   
 })
 
