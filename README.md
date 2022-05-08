@@ -94,21 +94,3 @@ An interactive visualization of the latest data is available [here](https://data
 
 ![](joss/covid-19-vaccinations-in-brazil.png)
 
-## Cite as
-
-I have invested a lot of time and effort in creating this resource to simplify the access to the data. If you use the data files from this repository, please cite:
-
-*Guidotti, E., (2021), "Crunching COVID-19 Vaccination Data for Brazilian Municipalities", Working Paper.*
-
-A BibTeX entry for LaTeX users is:
-
-```latex
-@unpublished{covid19br,
-  author = {Emanuele Guidotti},
-  title = {Crunching COVID-19 Vaccination Data for Brazilian Municipalities},
-  note = {Working Paper},
-  url = {https://github.com/eguidotti/covid19br/blob/main/joss/paper.pdf} 
-}
-```
-
-You can find the working paper [here](https://github.com/eguidotti/covid19br/blob/main/joss/paper.pdf) 
