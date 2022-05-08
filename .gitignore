@@ -19,6 +19,8 @@
 
 # RStudio files
 .Rproj.user/
+*.Rproj
+*.Rbuildignore
 
 # produced vignettes
 vignettes/*.html
@@ -40,3 +42,4 @@ vignettes/*.pdf
 
 # Extra
 .DS_Store
+
